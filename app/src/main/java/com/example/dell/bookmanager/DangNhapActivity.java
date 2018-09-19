@@ -1,7 +1,6 @@
 package com.example.dell.bookmanager;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +32,7 @@ public class DangNhapActivity extends AppCompatActivity {
         // khoi tao database
         databaseHelper = new DatabaseHelper(this);
 
-        xulyanhxa();
+        initViews();
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,12 +78,12 @@ public class DangNhapActivity extends AppCompatActivity {
 
     }
 
-    private void xulyanhxa() {
-        edtusename = (EditText) findViewById(R.id.edtusename);
-        edtpassword = (EditText) findViewById(R.id.edtpassword);
-        btnlogin = (Button) findViewById(R.id.btnlogin);
-        forgotpassword = (TextView) findViewById(R.id.forgotpassword);
-        register = (TextView) findViewById(R.id.register);
+    private void initViews() {
+        edtusename =  findViewById(R.id.edtusename);
+        edtpassword =  findViewById(R.id.edtpassword);
+        btnlogin = findViewById(R.id.btnlogin);
+        forgotpassword = findViewById(R.id.forgotpassword);
+        register =  findViewById(R.id.register);
     }
 
 
