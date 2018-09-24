@@ -1,4 +1,4 @@
-package com.example.dell.bookmanager.GiaoDienChinh;
+package com.example.dell.bookmanager.home;
 
 import android.annotation.SuppressLint;
 import android.support.design.internal.BottomNavigationItemView;

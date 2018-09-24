@@ -1,4 +1,4 @@
-package com.example.dell.bookmanager.Fragment_App;
+package com.example.dell.bookmanager.fragment;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.dell.bookmanager.Catalog.TheloaiActivity;
+import com.example.dell.bookmanager.catalog.TheloaiActivity;
 import com.example.dell.bookmanager.R;
 
 import java.util.Calendar;

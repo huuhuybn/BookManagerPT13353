@@ -6,7 +6,7 @@
     android:background="#fff"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".DangKiActivity">
+    tools:context=".ActSignUp">
 
     <RelativeLayout
         android:background="@color/colorPrimary"

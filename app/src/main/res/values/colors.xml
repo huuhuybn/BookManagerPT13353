@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorchu">#707070</color>
     <color name="colorud">#3a3a3a</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

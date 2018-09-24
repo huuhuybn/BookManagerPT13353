@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DangKiActivity extends AppCompatActivity {
+public class ActSignUp extends AppCompatActivity {
 
     private ImageView imgquaylai;
     private EditText edtusenamedk;

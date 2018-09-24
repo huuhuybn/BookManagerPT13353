@@ -1,4 +1,4 @@
-package com.example.dell.bookmanager.Fragment_App;
+package com.example.dell.bookmanager.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

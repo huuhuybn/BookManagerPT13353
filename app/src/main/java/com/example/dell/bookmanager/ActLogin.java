@@ -9,11 +9,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.dell.bookmanager.GiaoDienChinh.ManChinhActivity;
+import com.example.dell.bookmanager.home.ManChinhActivity;
 import com.example.dell.bookmanager.database.DatabaseHelper;
 import com.example.dell.bookmanager.model.User;
+import com.example.dell.bookmanager.sqlitedao.UserDAO;
 
-public class DangNhapActivity extends AppCompatActivity {
+public class ActLogin extends AppCompatActivity {
 
     private EditText edtusename;
     private EditText edtpassword;
@@ -23,7 +24,7 @@ public class DangNhapActivity extends AppCompatActivity {
 
 
     private DatabaseHelper databaseHelper;
-
+    private UserDAO userDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,14 @@ public class DangNhapActivity extends AppCompatActivity {
 
         // khoi tao database
         databaseHelper = new DatabaseHelper(this);
+        userDAO = new UserDAO(databaseHelper);
+
+        for (int i = 0; i < 20; i++) {
+            User user = new User("admin" + i,"admin123",
+                    "Huy Nguyen" + i,"123456789");
+            userDAO.insertUser(user);
+
+        }
 
         initViews();
 
@@ -38,17 +47,18 @@ public class DangNhapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String usename = edtusename.getText().toString().trim();
+
+                String username = edtusename.getText().toString().trim();
                 String password = edtpassword.getText().toString().trim();
 
-                if (usename.equals("")) {
+                if (username.equals("")) {
                     edtusename.setError(getString(R.string.noi));
                 }
                 if (password.equals("")) {
                     edtpassword.setError(getString(R.string.loi));
                 } else {
 
-                    User user = databaseHelper.getUserByUsername(usename);
+                    User user = userDAO.getUserByUsername(username);
 
                     // neu use !=null, tuc la username co tren DB thi so sanh password
                     if (user !=null){
@@ -56,14 +66,14 @@ public class DangNhapActivity extends AppCompatActivity {
 
                         // neu password giong nhau thi cho phep dang nhap va mo man hinh ManChinhActivity
                         if (passwordOnDatabase.equals(password)){
-                            Intent intent = new Intent(DangNhapActivity.this, ManChinhActivity.class);
+                            Intent intent = new Intent(ActLogin.this, ManChinhActivity.class);
                             startActivity(intent);
                         }
                         // neu password ko giong thi thong bao loi
-                        else Toast.makeText(DangNhapActivity.this,getString(R.string.notify_wrong_password),Toast.LENGTH_SHORT).show();
+                        else Toast.makeText(ActLogin.this,getString(R.string.notify_wrong_password),Toast.LENGTH_SHORT).show();
                     }
                     // neu user == null thi thong bao loi
-                    else  Toast.makeText(DangNhapActivity.this,getString(R.string.notify_wrong_password),Toast.LENGTH_SHORT).show();
+                    else  Toast.makeText(ActLogin.this,getString(R.string.notify_wrong_password),Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -72,7 +82,7 @@ public class DangNhapActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DangNhapActivity.this, DangKiActivity.class));
+                startActivity(new Intent(ActLogin.this, ActSignUp.class));
             }
         });
 

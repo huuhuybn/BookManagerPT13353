@@ -7,7 +7,7 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class ManChaoActivity extends AppCompatActivity {
+public class ActSplash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class ManChaoActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent=new Intent(ManChaoActivity.this,DangNhapActivity.class);
+                Intent intent=new Intent(ActSplash.this,ActLogin.class);
                 startActivity(intent);
                 finish();
             }

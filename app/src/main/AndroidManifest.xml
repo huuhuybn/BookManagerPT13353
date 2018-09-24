@@ -8,25 +8,47 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ManChaoActivity">
+        android:theme="@style/AppThemeNoActionBar">
+        <activity android:name=".ActSplash">
+
+        </activity>
+        <activity android:name=".ActLogin" />
+        <activity android:name=".ActSignUp" />
+        <activity android:name=".home.ManChinhActivity" />
+        <activity android:name=".catalog.TheloaiActivity" />
+        <activity android:name=".catalog.SachActivity" />
+        <activity android:name=".catalog.HoaDonActivity" />
+        <activity android:name=".catalog.SachbanActivity" />
+        <activity android:name=".catalog.ThongkeActivity" />
+        <activity android:name=".setting.NgonNguActivity" />
+        <activity android:name=".setting.TroGiupActivity" />
+        <activity android:name=".account.DoiTaiKhoanActivity" />
+        <activity
+            android:name=".ActListUser"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_act_list_user"
+            android:parentActivityName=".home.ManChinhActivity"
+            android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dell.bookmanager.home.ManChinhActivity" />
         </activity>
-        <activity android:name=".DangNhapActivity" />
-        <activity android:name=".DangKiActivity" />
-        <activity android:name=".GiaoDienChinh.ManChinhActivity" />
-        <activity android:name=".Catalog.TheloaiActivity" />
-        <activity android:name=".Catalog.SachActivity" />
-        <activity android:name=".Catalog.HoaDonActivity" />
-        <activity android:name=".Catalog.SachbanActivity" />
-        <activity android:name=".Catalog.ThongkeActivity" />
-        <activity android:name=".Setting.NgonNguActivity" />
-        <activity android:name=".Setting.TroGiupActivity" />
-        <activity android:name=".Account.DoiTaiKhoanActivity" />
+        <activity
+            android:name=".ActEditUser"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_act_edit_user"
+            android:parentActivityName=".ActListUser"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dell.bookmanager.ActListUser" />
+        </activity>
     </application>
 
 </manifest>

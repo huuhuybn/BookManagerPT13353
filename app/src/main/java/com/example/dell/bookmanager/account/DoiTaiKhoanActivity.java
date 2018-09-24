@@ -1,4 +1,4 @@
-package com.example.dell.bookmanager.Account;
+package com.example.dell.bookmanager.account;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

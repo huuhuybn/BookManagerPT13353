@@ -1,4 +1,4 @@
-package com.example.dell.bookmanager.Catalog;
+package com.example.dell.bookmanager.catalog;
 
 import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;

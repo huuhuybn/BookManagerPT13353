@@ -6,16 +6,20 @@
     <string name="dangki">Register</string>
     <string name="quenmatkhau">Forgot password</string>
 
+
     <string name="noi">the usename is not valid</string>
     <string name="loi">Invalid password</string>
     <string name="hoidangki">You already have an account? </string>
     <string name="loitkdk">You have not entered an account</string>
     <string name="loidkmk">Password can not be blank</string>
 
+
+    <!--Home Act-->
     <string name="title_activity_man_chinh">ManChinhActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
 
     <string name="Overview">Overview</string>
     <string name="Bill">Bill</string>
@@ -62,6 +66,15 @@
     <string name="sachbanchaynhat">Best selling books</string>
     <string name="chonngonngu">Select language</string>
     <string name="notify_wrong_password">Wrong Username or Passwrod. Please tell me why!!!</string>
+
+
+    <!--List User Act-->
+    <string name="title_activity_act_list_user">User Manager</string>
+
+
+    <!--Edit User Act-->
+    <string name="title_activity_act_edit_user">Edit User</string>
+
 
     <!--Tiếp theo-->
 
