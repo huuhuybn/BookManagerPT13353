@@ -11,6 +11,11 @@
         android:theme="@style/AppThemeNoActionBar">
         <activity android:name=".ActSplash">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ActLogin" />
         <activity android:name=".ActSignUp" />
@@ -30,11 +35,7 @@
             android:parentActivityName=".home.ManChinhActivity"
             android:theme="@style/AppTheme">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dell.bookmanager.home.ManChinhActivity" />

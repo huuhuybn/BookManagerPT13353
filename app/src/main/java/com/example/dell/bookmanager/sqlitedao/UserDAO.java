@@ -33,12 +33,12 @@ public class UserDAO implements Constant {
         contentValues.put(COLUMN_PASSWORD, user.getPassword());
         contentValues.put(COLUMN_NAME, user.getName());
         contentValues.put(COLUMN_PHONE, user.getPhone());
+
         long id = sqLiteDatabase.insert(TABLE_USER, null, contentValues);
 
         if (Constants.isDEBUG) Log.e("insertUser", "insertUser : " + id);
 
         sqLiteDatabase.close();
-
 
     }
 

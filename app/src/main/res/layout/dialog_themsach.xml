@@ -27,21 +27,27 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/tvId"
             android:hint="@string/matheloai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/tvName"
             android:hint="@string/tentheloai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/tvPos"
             android:hint="@string/vitritheloai"
+            android:inputType="number"
+            android:imeOptions="actionNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/tvDes"
             android:hint="@string/mota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -62,7 +68,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/btnluu"
+                    android:id="@+id/btnSave"
                     android:layout_weight="1"
                     android:textAllCaps="false"
                     android:background="@color/colorPrimary"
@@ -84,7 +90,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/btnhienthi"
+                    android:id="@+id/btnCancel"
                     android:textAllCaps="false"
                     android:background="@color/colorPrimary"
                     android:text="@string/huy"
